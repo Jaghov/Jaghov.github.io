@@ -1,10 +1,10 @@
 [application]
+out_dir = "docs"
 
 # App (Project) Name
 name = "resume"
-
 [web.app]
-
+base_path = "Jaghov.github.io"
 # HTML title tag content
 title = "resume"
 

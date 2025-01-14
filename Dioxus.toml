@@ -1,12 +1,11 @@
 [application]
-out_dir = "docs"
+name = "Jaghov-github-io"
 
-# App (Project) Name
-name = "resume"
 [web.app]
-# HTML title tag content
-title = "resume"
-base_path = "Jaghov.github.io/target/dx/resume/release/web/public"
+title = "Joseph Aghoghovbia - personal site"
+
+[web.watcher]
+watch_path = ["src", "assets"]
 
 # include `assets` in web platform
 [web.resource]

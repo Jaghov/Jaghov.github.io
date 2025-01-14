@@ -1,0 +1,33 @@
+on:
+    push:
+        branches:
+            - main
+
+env:
+    CARGO_INCREMENTAL: 0
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - run: rustup update
+            - run: cargo install cargo-binstall
+            - run: cargo binstall dioxus-cli
+            - run: dx bundle
+
+            - name: Publish
+              run: |
+                  cp -r public/* target/dx/site/release/web/public/
+                  git config --global user.email "Jaghoghov@gmail.com"
+                  git config --global user.name "Joseph Aghoghovbia"
+                  git checkout gh-pages
+                  rm -R ./docs
+                  mv target/dx/site/release/web/public docs
+                  git add .
+                  git commit -m "Release"
+                  git push

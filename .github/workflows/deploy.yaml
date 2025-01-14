@@ -8,26 +8,26 @@ env:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        # runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
+        # steps:
+        #     - uses: actions/checkout@v4
+        #       with:
+        #           fetch-depth: 0
 
-            - run: rustup update
-            - run: cargo install cargo-binstall
-            - run: cargo binstall dioxus-cli
-            - run: dx bundle
+        #     - run: rustup update
+        #     - run: cargo install cargo-binstall
+        #     - run: cargo binstall dioxus-cli
+        #     - run: dx bundle
 
-            - name: Publish
-              run: |
-                  # cp -r public/* target/dx/site/release/web/public/
-                  git config --global user.email "Jaghov@users.noreply.github.com"
-                  git config --global user.name "Joseph Aghoghovbia"
-                  git checkout gh-pages
-                  rm -R ./docs
-                  mv target/dx/site/release/web/public docs
-                  git add .
-                  git commit -m "Release"
-                  git push
+        #     - name: Publish
+        #       run: |
+        #           # cp -r public/* target/dx/site/release/web/public/
+        #           git config --global user.email "Jaghov@users.noreply.github.com"
+        #           git config --global user.name "Joseph Aghoghovbia"
+        #           git checkout gh-pages
+        #           rm -R ./docs
+        #           mv target/dx/site/release/web/public docs
+        #           git add .
+        #           git commit -m "Release"
+        #           git push

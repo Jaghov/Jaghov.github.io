@@ -3,6 +3,7 @@ name = "Jaghov-github-io"
 
 [web.app]
 title = "Joseph Aghoghovbia - personal website"
+base_path = "Jaghov.github.io/docs"
 
 [web.watcher]
 watch_path = ["src", "assets"]

@@ -27,7 +27,8 @@ jobs:
                   git config --global user.name "Joseph Aghoghovbia"
                   git checkout gh-pages
                   rm -R ./docs
-                  mv target/dx/site/release/web/public docs
+                  ls
+                  mv Jaghov.github.io/target/dx/site/release/web/public docs
                   git add .
                   git commit -m "Release"
                   git push

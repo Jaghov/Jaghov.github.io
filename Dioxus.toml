@@ -2,7 +2,7 @@
 name = "Jaghov-github-io"
 
 [web.app]
-title = "Joseph Aghoghovbia - personal site"
+title = "Joseph Aghoghovbia - personal website"
 
 [web.watcher]
 watch_path = ["src", "assets"]

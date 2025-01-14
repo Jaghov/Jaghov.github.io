@@ -28,7 +28,7 @@ jobs:
                   git checkout gh-pages
                   rm -R ./docs
                   ls
-                  mv Jaghov.github.io/target/dx/site/release/web/public docs
+                  mv /home/runner/work/Jaghov.github.io/Jaghov.github.io/target/dx/resume/release/web/public docs
                   git add .
                   git commit -m "Release"
                   git push

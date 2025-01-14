@@ -3,10 +3,10 @@ out_dir = "docs"
 
 # App (Project) Name
 name = "resume"
-[web.app.release]
-base_path = "Jaghov.github.io/target/dx/resume/release/web/public"
+[web.app]
 # HTML title tag content
 title = "resume"
+base_path = "Jaghov.github.io/target/dx/resume/release/web/public"
 
 # include `assets` in web platform
 [web.resource]

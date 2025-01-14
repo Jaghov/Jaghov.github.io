@@ -3,8 +3,8 @@ out_dir = "docs"
 
 # App (Project) Name
 name = "resume"
-[web.app]
-base_path = "Jaghov.github.io"
+[web.app.release]
+base_path = "Jaghov.github.io/target/dx/resume/release/web/public"
 # HTML title tag content
 title = "resume"
 
